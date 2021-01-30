@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+
+  app:
+    image: bmeme/mn-dev:2.3.0-jdk-11-graalvm
+    entrypoint: /bin/sleep infinity
+    working_dir: /usr/src/app/
+    volumes:
+      - "../app/:/usr/src/app"
+      - "../.cache/:/usr/src/cache"
+    environment:
+      - MAVEN_CONFIG=/usr/src/cache/.m2
+      - TERM=xterm-256color

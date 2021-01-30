@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+./.bmeme/bin/app mvn -Denv=docker -Duser.home=/usr/src/cache/ $@
