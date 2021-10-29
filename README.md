@@ -21,4 +21,4 @@ Package your application
 $ ./cmvn clean compile test package
 ```
 
-The application will be found in `app/target/maven`.
+You will find the runnable application in `app/target/marvin`.

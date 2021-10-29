@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
 public class MainCommand implements Runnable {
 
     @Option(names = {"-v", "--verbose"}, description = "Be more verbose")
-    boolean verbose;
+    private boolean verbose = false;
 
     @Option(names = {"-p", "--project"}, description = "mn-dev, gatsby-dev, cjava")
     private String project = null;
