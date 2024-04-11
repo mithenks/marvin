@@ -1,0 +1,17 @@
+name: Docker Build CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  docker-build:
+    name: Run docker build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Create marvin:build docker image
+      run: docker build -f docker/Dockerfile.app -t marvin:build .
+    - name: Create executable using marvin:build docker image
+      run: docker build -f docker/Dockerfile.dist -t marvin:dist .

@@ -1,5 +1,4 @@
-/target/
-!.mvn/wrapper/maven-wrapper.jar
+/app/target/
 
 ### STS ###
 .apt_generated
@@ -16,12 +15,8 @@
 *.iml
 *.ipr
 
-### NetBeans ###
-/nbproject/private/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+/.vscode/
 
 /.cache/
+
+/docker/bob-s-home

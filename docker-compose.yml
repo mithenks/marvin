@@ -1,0 +1,15 @@
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: docker/Dockerfile.app
+    entrypoint: /bin/sleep infinity
+    working_dir: /usr/src/app
+    volumes:
+      - "./app/:/usr/src/app"
+      - "./.cache:/usr/src/cache"
+      - "./docker/bob-s-home:/home/bob"
+    environment:
+      - TERM=xterm-256color
+      - TZ=Europe/Rome
+      - MAVEN_OPTS=-Duser.home=/usr/src/cache/
