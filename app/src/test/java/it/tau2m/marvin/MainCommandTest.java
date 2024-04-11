@@ -1,4 +1,4 @@
-package marvin;
+package it.tau2m.marvin;
 
 import io.micronaut.configuration.picocli.PicocliRunner;
 import io.micronaut.context.ApplicationContext;

@@ -3,4 +3,4 @@ FROM marvin:build as build
 COPY --chown=bob app /app
 WORKDIR /app
 
-RUN mvn --no-transfer-progress clean package
+RUN mvn --no-transfer-progress clean package -Dpackaging=native-image

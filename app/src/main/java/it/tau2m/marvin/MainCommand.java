@@ -1,4 +1,4 @@
-package marvin;
+package it.tau2m.marvin;
 
 import io.micronaut.configuration.picocli.PicocliRunner;
 
@@ -34,7 +34,7 @@ public class MainCommand implements Runnable {
             if ( verbose ) {
                 System.out.println("Project to be initialized: " + project);
             }
-            this.runCommand("git", "clone", "https://github.com/Mithenks/" + project, ".");
+            this.runCommand("git", "clone", "https://github.com/mithenks/" + project, ".");
             this.runCommand("rm", "-rf", ".git");
         }
     }
